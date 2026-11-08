@@ -1,6 +1,6 @@
 import dynamic from 'next/dynamic';
 
-const PhaserCrashGame = dynamic(() => import('../../components/crash/PhaserCrashGame'), { ssr: false } as any);
+const PhaserCrashGame = dynamic<any>(() => import('../../components/crash/PhaserCrashGame') as any, { ssr: false });
 
 export default function CrashPage() {
   return (
